@@ -11,7 +11,10 @@ const Drawer = createDrawerNavigator();
 function MyDrawer() {
     return (
         <NavigationContainer>
-            <Drawer.Navigator>
+            <Drawer.Navigator
+                drawerContent={(props) => <CustomDrawer {...props} />}
+                drawerContentOptions={{ activeBackgroundColor: '#5cbbff', activeTintColor: '#ffffff' }} 
+            >
                 <Drawer.Screen name="One" component={FirstPage} />
                 <Drawer.Screen name="Two" component={SecondePage} />
             </Drawer.Navigator>

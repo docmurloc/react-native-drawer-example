@@ -1,13 +1,26 @@
 import React from 'react';
 import {
-     Text, View
+    Text, View
 } from 'react-native';
 
-function CustomDrawer() {
+import {
+    DrawerContentScrollView,
+    DrawerItemList,
+    DrawerItem
+} from '@react-navigation/drawer';
+
+
+function CustomDrawer(props) {
     return (
-        <View>
-            <Text>Custom drawer Page</Text>
-        </View>
+        <DrawerContentScrollView {...props}>
+            <DrawerItemList {...props} />
+            <DrawerItem
+                label="Help"
+                onPress={() => {
+                    console.log("help")
+                }}
+            />
+        </DrawerContentScrollView>
     )
 }
 
