@@ -13,7 +13,12 @@ function MyDrawer() {
         <NavigationContainer>
             <Drawer.Navigator
                 drawerContent={(props) => <CustomDrawer {...props} />}
-                drawerContentOptions={{ activeBackgroundColor: '#5cbbff', activeTintColor: '#ffffff' }} 
+                drawerContentOptions={{ 
+                    activeBackgroundColor: '#5cbbff', 
+                    activeTintColor: 'orange',
+                    inactiveBackgroundColor: 'green',
+                    inactiveTintColor: 'red'
+                }} 
             >
                 <Drawer.Screen name="One" component={FirstPage} />
                 <Drawer.Screen name="Two" component={SecondePage} />
